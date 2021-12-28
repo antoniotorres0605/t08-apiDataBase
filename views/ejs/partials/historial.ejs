@@ -1,0 +1,53 @@
+<br><br>
+<div class="container">
+  <table class="table table-striped table-bordered table-hover table-dark">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Titulo</th>
+        <th>Precio</th>
+        <th>Foto</th>
+      </tr>
+    </thead>
+    <tbody id="historial_datos">
+      <!---->
+      <script>
+        /*let socket1 = io();
+
+        let parrafo1 = document.getElementById("historial_datos");
+
+        socket1.on("serverhistorial",data =>{
+          let inner = "";
+          console.log(data);
+          data.forEach(dato => {
+            inner+=`<tr>
+                      <th>${dato.id}</th>
+                      <th>${dato.title}</th>
+                      <th>${dato.price}</th>
+                      <th>${dato.thumbnail}</th>
+                      </tr>`;
+                      
+          });
+          parrafo1.innerHTML = inner;
+        });
+        socket.emmit("productos",)*/
+        let parrafo1 = document.getElementById("historial_datos");
+        socket.on('productos',data =>{
+          console.log("Chale")
+          let inner = "";
+          console.log(data);
+          data.forEach(dato => {
+            inner+=`<tr>
+                      <th>${dato.id}</th>
+                      <th>${dato.title}</th>
+                      <th>${dato.price}</th>
+                      <th>${dato.thumbnail}</th>
+                      </tr>`;
+                      
+          });
+          parrafo1.innerHTML = inner;
+      });
+      </script>
+    </tbody>
+  </table>
+</div>

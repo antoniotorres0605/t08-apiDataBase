@@ -14,12 +14,13 @@ class Contenedor{
     try {
       //Inserción a la base de datos
       let response = await this.db.from(this.database).insert(product);
+      let r;
       await this.db.from(this.database).select('id').then((rows)=>{
-        for(row in rows){
-          console.log(response);
-          return row;
+        for(let row in rows){
+          r = row;
         }
       });
+      return(r);
     } catch (error) {
       console.log(error)
     }

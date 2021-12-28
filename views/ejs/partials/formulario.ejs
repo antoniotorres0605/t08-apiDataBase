@@ -1,0 +1,23 @@
+<h1>Ingresar datos</h1>
+
+<div class="container">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 10px 10px;">
+    <div style="align-items: center;" class="p-3 mb-2 bg-primary text-white">
+      <form id="api" action="productos" method="post">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" name="producto[title]" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text" name="producto[price]" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="thumbnail">Thumbnail</label>
+          <input type="text" name="producto[thumbnail]" class="form-control">
+        </div>
+        <button id="contenedor-formulario" style="align-items: center;" class="btn btn-success" type="submit" >Agregar</button>
+      </form>
+    </div>
+  </div>
+</div>
